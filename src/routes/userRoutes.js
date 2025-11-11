@@ -12,6 +12,16 @@ router.get('/', async(req, res) => {
      res.status(501).json(error)
   }
 })
+//post
+ router.post('/add', async(req, res)=>{
+    try{
+      const add = await User.create(req.body.title)
+      res.status(200).json("Username added successfully!")
+    }
+    catch(error){
+      res.status(501).json(error)
+    }
+ })
 
 
 
