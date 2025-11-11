@@ -8,15 +8,14 @@ require('./config/db')
 //middleware to parse JSON bodies
 
 app.use(express.json());
+app.use(express.urlencoded({extended: true}))
 
 const userRoutes = require('./routes/userRoutes');
 
 //use Routes
 app.use('/api/users', userRoutes);   
 
-app.get('/', (req, res) =>{
-    res.json({message: "Welcome to the API"})
-})
+
 
 
 app.listen(PORT, () => {

@@ -6,6 +6,7 @@ const router = express.Router();
 router.get('/', async(req, res) => {
   try{
       const userData = await User.find({});
+      res.json("Data retrieved here!")
       res.status(200).json(userData)
   }
   catch(error){
