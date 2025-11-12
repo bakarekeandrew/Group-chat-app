@@ -9,4 +9,4 @@ mongoose.connect("mongodb+srv://luckybrownandrew_db_user:123@cluster0.xubiwuh.mo
     console.error("Database connection fail", error)
 })
 
-mongoose.exports = mongoose
+module.exports = mongoose

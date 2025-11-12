@@ -11,9 +11,12 @@ app.use(express.json());
 app.use(express.urlencoded({extended: true}))
 
 const userRoutes = require('./routes/userRoutes');
+const messageRoutes = require('./routes/messageRoute');
 
 //use Routes
-app.use('/api/users', userRoutes);   
+app.use('/api/users', userRoutes);  
+//message Routes
+app.use('/api/message', messageRoutes); 
 
 
 
